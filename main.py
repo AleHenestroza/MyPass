@@ -5,12 +5,12 @@ from labels import setup_labels
 from entries import setup_entries
 from generate_button import GeneratePasswordBtn
 from add_entry_button import AddButton
+from search_button import SearchButton
 
-# TODO-1 Let the user retrieve their passwords easily from the application instead of having to open the .csv file
-# TODO-2 Let the user input a preferred password length for the random password generator
-# TODO-3 Let the user decide how many uppercase or lowercase letters, as well as symbols and numbers, are in a password
-# TODO-4 Change storage from .json to use a database with basic encryption
-# TODO-5 Tweak User Interface to make it look good
+# TODO-1 Let the user input a preferred password length for the random password generator
+# TODO-2 Let the user decide how many uppercase or lowercase letters, as well as symbols and numbers, are in a password
+# TODO-3 Change storage from .json to use a database with basic encryption
+# TODO-4 Tweak User Interface to make it look good
 
 
 def main():
@@ -24,6 +24,7 @@ def main():
     entries = setup_entries()
     GeneratePasswordBtn(entries)
     AddButton(entries)
+    SearchButton(entries["website"])
 
     window.mainloop()
 
