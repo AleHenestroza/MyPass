@@ -1,0 +1,5 @@
+BACKGROUND_COLOR = "#4d5461"
+FOREGROUND_COLOR = "#e6e9ed"
+BUTTON_COLOR = "#4470c2"
+LBL_FONT = ("Arial", 12)
+BTN_FONT = ("Arial", 14, "bold")
