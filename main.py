@@ -22,7 +22,7 @@ def main():
     Logo(logo_img)
     setup_labels()
     entries = setup_entries()
-    GeneratePasswordBtn(entries)
+    GeneratePasswordBtn(entries["password"])
     AddButton(entries)
     SearchButton(entries["website"])
 
