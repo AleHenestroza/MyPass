@@ -3,7 +3,7 @@ from tkinter import Entry
 
 def setup_entries():
     website_entry = Entry(width=28)
-    website_entry.grid(row=1, column=1, sticky="W", columnspan=2, pady=5)
+    website_entry.grid(row=1, column=1, sticky="W", pady=5)
     website_entry.focus()
     username_entry = Entry(width=53)
     username_entry.grid(row=2, column=1, sticky="W", columnspan=2, pady=5)
