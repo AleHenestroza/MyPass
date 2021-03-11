@@ -25,7 +25,5 @@ class SearchButton(Button):
         else:
             entry = search_entry(website_text)
             if entry:
-                if entry == -1:
-                    messagebox.showwarning(title="No matches", message="No match could be found for your search term.")
-                else:
-                    messagebox.showinfo(title=website_text, message=f"Username: {entry['Username']}\nPassword: {entry['Password']}")
+                messagebox.showinfo(title=website_text, message=f"Username: {entry['Username']}\n"
+                                                                f"Password: {entry['Password']}")
