@@ -11,6 +11,7 @@ from search_button import SearchButton
 # TODO-2 Let the user decide how many uppercase or lowercase letters, as well as symbols and numbers, are in a password
 # TODO-3 Change storage from .json to use a database with basic encryption
 # TODO-4 Tweak User Interface to make it look good
+# TODO-5 Add localization for Spanish language
 
 
 def main():
