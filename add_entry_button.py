@@ -15,16 +15,9 @@ class AddButton(Button):
             command=self.add_entry
         )
         self.entries = entries
-        self.entries_json = {}
         self.grid(row=4, column=1, sticky="E", pady=15)
 
     def add_entry(self):
-        self.entries_json = {
-            self.entries["website"].get(): {
-                "Username": self.entries["username"].get(),
-                "Password": self.entries["password"].get(),
-            }
-        }
         error = False
         for key, value in self.entries.items():
             if not value.get():
@@ -33,7 +26,13 @@ class AddButton(Button):
         if error:
             messagebox.showerror(title="Oops", message="One or more fields are empty.")
         else:
-            save_entry(self.entries_json)
+            entries_json = {
+                self.entries["website"].get().title(): {
+                    "Username": self.entries["username"].get(),
+                    "Password": self.entries["password"].get(),
+                }
+            }
+            save_entry(entries_json)
             messagebox.showinfo(title="Success", message="The new entry has been saved.")
             for key, value in self.entries.items():
                 value.delete(0, END)

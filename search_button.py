@@ -19,18 +19,13 @@ class SearchButton(Button):
         self.grid(row=1, column=2, sticky="W", padx=5)
 
     def search(self):
-        web_entry = self.website.get()
-        if not web_entry:
+        website_text = self.website.get().title()
+        if not website_text:
             messagebox.showwarning(title="Invalid search", message="You must enter a website before searching.")
         else:
-            entry = search_entry(web_entry)
+            entry = search_entry(website_text)
             if entry:
                 if entry == -1:
                     messagebox.showwarning(title="No matches", message="No match could be found for your search term.")
                 else:
-                    values = []
-                    for key, value in entry.items():
-                        values.append(value)
-                    username = values[0]
-                    password = values[1]
-                    messagebox.showinfo(title=web_entry, message=f"Username: {username}\nPassword: {password}")
+                    messagebox.showinfo(title=website_text, message=f"Username: {entry['Username']}\nPassword: {entry['Password']}")
